@@ -1,5 +1,5 @@
 [[!sidebar content="""
-[[!calendar type=month month=09 year=2017 pages="blog/* or documents/* or projects/*"]]
+[[!calendar type=month month=09 year=2017 pages="blog/* and !*/Discussion or documents/* and !*/Discussion or projects/* and !*/Discussion"]]
 """]]
 
-[[!inline pages="creation_month(09) and creation_year(2017) and blog/* or documents/* or projects/*" limit=0 feeds=no reverse=yes archive=yes]]
+[[!inline pages="creation_month(09) and creation_year(2017) and (blog/* and !*/Discussion or documents/* and !*/Discussion or projects/* and !*/Discussion)" limit=0 feeds=no reverse=yes archive=yes]]
