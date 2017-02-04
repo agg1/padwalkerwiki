@@ -1,0 +1,58 @@
+author/commiter from git with meta plugin
+more or toggle plugin
+linkmap plugin
+relocate bootstrap/js/css into resources folder to simplify calendar setup in sidebar.mdwn
+adapt archive listing
+
+update pws                                                                                                    
+gunnar ftp,sftp,ftps                                                                                          
+check logrotate                                                                                               
+mumble                                                                                                        
+maniac-it.org                                                                                                 
+mozilla irc network                                                                                           
+                                                                                                              
+IEEE 802.1AE MACsec                                                                                           
+own mail server or other mail provider, dovecot, currier, freeipa/ldap,kerberos, sasl,..., znc, bitlbee, dcc port forward, rspamd,gopher
+dhclient crontab check                                                                                        
+PRINTING VM for brother printer                                                                               
+gentoo slots, version, masks                                                                                  
+                                                                                                              
+buy lock, müllabholung, kartons, paketpapier, Bankschließfach                                                 
+create sane init scripts for systrace and vm start/stop                                                       
+update systrace profiles to be less prone to system updates with wildcard matches on library version          
+check full mesh-grid ipsec topology, transport mode, SA build with concentrator, p2p inside LAN               
+                                                                                                              
+bugs.gentoo.org, mutt bug related to gpg, certificate pinning                                                 
+lnav on irc logs -> move, encrypt, irc vhost, freenode sasl auth/tor hidden service, oftc tor proxy           
+empfehlungsbund.de                                                                                            
+                                                                                                              
+ipv6/bgp, tunnelbroker, ldap,kerberos, arptables/ebtables, honeypot, trace ipsec with wireshark, particularly icmp
+remove gentoo branding (openrc), isolinux                                                                     
+openssh skey flag, x509?                                                                                      
+                                                                                                              
+signed Manifest files                                                                                         
+tex editor, gtk2 based?                                                                                       
+                                                                                                              
+vim, plugins, scripts, vimtutor                                                                               
+regular automated fetch sync and build, cronjob                                                               
+fix systrace exec crashes, static systrace build, static qemu build                                           
+finally progress with an update, kernel 4.9                                                                   
+dante proxy, torrent setup                                                                                    
+download rfc $rfc -i                                                                                          
+                                                                                                              
+gps/dcf77 hardware clock, clock drifting, umts chips, linux                                                   
+own primes for gpg, ssh etc.... primzahlsatz,elliptic curve,RSA parameters,DH,gpg-agent scdaemon/usb/smartcard,pkauth/known_hosts,skey otp
+                                                                                                              
+icinga, syslog2irc, nagircbot, nagios monitoring                                                              
+reprofile firefox,thunderbird                                                                                 
+Xorg non-root                                                                                                 
+intelME                                                                                                       
+offline wikipedia, sservices setup                                                                            
+check llvm/clang bootstrap, musl build                                                                        
+sync NIST CVE database, glsa-check                                                                            
+check arp, dhcp, ip stack                                                                                     
+randomize_va_space remove /sys paramater or make read-only                                                    
++dnssec, dnscrypt proxy                                                                                       
+device bonding, check whether kabeld allows for two interfaces being connected                                
+torrc-relay, country restrictions, exit-trans, trans-relay                                                    
+
