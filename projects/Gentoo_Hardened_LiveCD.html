@@ -7,13 +7,150 @@
 	<meta name="author" content="aggi "/>
 	<meta name="created" content="2017-02-02T18:13:14.951828285"/>
 	<meta name="changedby" content="aggi "/>
-	<meta name="changed" content="2017-02-03T17:01:31.645942724"/>
+	<meta name="changed" content="2017-02-05T00:48:46.944762204"/>
 	<style type="text/css">
 		@page { margin: 0.79in }
 		p { margin-bottom: 0.1in; line-height: 120% }
+		a:link { so-language: zxx }
 	</style>
 </head>
 <body lang="en-US" dir="ltr">
+<p style="margin-bottom: 0in; line-height: 100%">Soon documentation
+will be published how to:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Build Your
+	own LiveCD from trusted source, fully automated(!), with a <a href="https://wiki.gentoo.org/wiki/Project:Hardened">hardened
+	toolchain</a></p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">No, there is
+	nothing like it yet… while there is other LiveCD distributions
+	none of them is shipped as hardened build, ready to be deployed as
+	Desktop/Workstation or Server system</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Many build
+	flavors are available already</p>
+	<ul>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">AdminCD/Rescue
+		System, also used as build host for automated update builds</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Desktop
+		flavor shipping everything one would expect</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Minimal
+		flavor as a baseline used for</p>
+		<ul>
+			<li/>
+<p style="margin-bottom: 0in; line-height: 100%">web server</p>
+			<li/>
+<p style="margin-bottom: 0in; line-height: 100%">proxy
+			server</p>
+			<li/>
+<p style="margin-bottom: 0in; line-height: 100%">mail server
+			(todo)</p>
+		</ul>
+	</ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">All LiveCD
+	flavors are providing distinct features such as:</p>
+	<ul>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">removal of
+		systemd!!!</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">removal of
+		dbus, consolekit, policykit, pam, … 
+		</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">removal of
+		Openssl in favor of Libressl and all packages being patched to be
+		compatible with the removal of SSLv3</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">encrypted
+		log files, patch to hide rsyslog key</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">root file
+		system encryption at block layer, and file-system layer encryption
+		on top of it; all supported with sane and simple helper scripts</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">a
+		paranoid-proof firewall ruleset applied by default, particularly
+		suitable for IPSec and Desktop and Server environments; sane
+		logging to encrypted log file by default</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">sane and
+		simple IPsec configuration for road-warrior setups available</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">read-only
+		file system to protect against tampering</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">helper
+		scripts to attach encrypted LVM to persist log and home data or
+		whatever one desires</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">network
+		applications traced and jailed with <a href="http://www.citi.umich.edu/u/provos/systrace/">systrace</a>
+		and pre-configured profiles for firefox, thunderbird, dhcp, ntp,…
+		and many more security critical exposed network applications</p>
+		<li/>
+<p style="margin-bottom: 0in; line-height: 100%">…
+		endlessly more sane and simple solutions</p>
+	</ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">This LiveCD
+	project’s fully automated(!) build system may easily be utilized
+	and configured to assemble custom stripped down minimal ISO-releases
+	(or PXEBoot, thanks again to Gentoo catalyst folks) for specific
+	needs to deploy these as virtual machines which has been tested
+	already with various server installations of mine (this wiki is
+	hosted from a LiveCD, a tor proxy setup, IRC, mail server, ftp
+	server; see the <a href="http://www.padwalker.eu/gitweb/?p=catalyst.git;a=tree;f=specs/amd64/hardened;h=bb15ad414cae1e1655b1494976c26cf915b7d011;hb=HEAD">spec
+	files</a> and <a href="http://www.padwalker.eu/gitweb/?p=catalyst.git;a=tree;f=rootfs/usr/local/bin;h=ffab0c84d472ccd295abc9b0f51939a9496d6d20;hb=HEAD">qemu-vm
+	launcher scripts</a> vm_*.sh in the git repository what has been
+	tested in production already)</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Custom
+	LiveCDs may be configured and build fast and simple, this can be
+	considered a reasonable alternative to <a href="https://www.docker.com/">docker</a>
+	and <a href="http://libvirt.org/">libvirt virsh</a> created in just
+	a couple of weeks!</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">LiveCDs
+	cannot be tampered with, these are read-only to provide a reliable
+	baseline.</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Work is done and I
+am operating about 15 machines already with it, all booted from ISO
+LiveCDs. Thanks to Gentoo tooling available it was a pleasure to get
+things up and running … there is nothing like it elsewhere. <em><b>But
+all this has to be and will be documented</b></em>, otherwise this
+work won’t be of use to anyone else except me.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Meanwhile, for those
+keen on digging into this already without documentation the git repos
+are public already:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><a href="https://www.padwalker.eu/gitweb/?p=catalyst.git">https://www.padwalker.eu/gitweb/?p=catalyst.git</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><a href="https://www.padwalker.eu/gitweb/?p=extra_overlay.git">https://www.padwalker.eu/gitweb/?p=extra_overlay.git</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><a href="https://github.com/agg1/catalyst">https://github.com/agg1/catalyst</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><a href="https://github.com/agg1/extra_overlay">https://github.com/agg1/extra_overlay</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">This month I’ll
+upload stage3 tarballs including hardened toolchain and libressl,
+just in case some of You would like to spare the time digging into
+and testing the <a href="https://wiki.gentoo.org/wiki/Project:LibreSSL">bootstrapping
+process of Libressl</a></p>
+<p style="margin-bottom: 0in; line-height: 100%">With these anyone
+who would like may easily create custom hardened LiveCDs for himself
+for any purpose there might be for such a Linux distribution (for
+example a wiki page like this one).</p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
