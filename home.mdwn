@@ -1,0 +1,1 @@
+[[!inline pages="page(./home/*) and !*/Discussion" show="10" feedshow="10" actions=no archive=no feeds=no rss=no atom=no]]
